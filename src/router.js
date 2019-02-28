@@ -16,4 +16,5 @@ export default new Router({
     { path: '/lists', name: 'lists-index', component: ListIndex },
     { path: '/lists/:id', name: 'lists-show', component: ListShow }
   ]
+
 })
