@@ -10,10 +10,8 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    { path: '/', name: 'sign-up', component: SignUp },
-    { path: '/lists', name: 'lists-index', component: ListIndex },
-    { path: '/login', name: 'login', component: Login }
-
-
-  ]
+          { path: '/', name: 'sign-up', component: SignUp },
+          { path: '/lists', name: 'lists-index', component: ListIndex },
+          { path: '/login', name: 'login', component: Login }
+          ]
 })
