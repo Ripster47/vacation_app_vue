@@ -42,19 +42,7 @@
 </template>
 
 <style>
-  h3{
-    text-align: center;
-    padding-bottom: 10px;
-  }
-  p{
-    text-align: center;
-  }
-  .button_join{
-    text-align: center;
-  }
-  .already{
-    padding-top: 10px;
-  }
+
 </style>
 
 <script>
