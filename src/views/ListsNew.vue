@@ -36,11 +36,15 @@ var axios = require('axios');
 export default {
   data: function() {
     return {
-              newListName: "",
-              newListDate: "",
-              errors: []  
-            }
-        
+
+      list: {
+              name: "",
+              date: "",
+              // user_id: ""
+            },
+      errors: []  
+    };      
+
   },
   created: function() {},
   methods: {
