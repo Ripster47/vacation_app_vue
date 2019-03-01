@@ -27,6 +27,7 @@ export default {
     .then(response => {
       this.lists = response.data;
     });
+    // ask Josh if we can put the logic for showing only a users lists via user_id here
   },
   methods: {}
 };
