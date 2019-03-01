@@ -50,6 +50,7 @@ export default {
                     date: this.newListDate
                     // user_id: this.user_id
                     };
+                    
       axios.post("/api/lists", params)
         .then(response => {
           this.$router.push("/lists/" + response.data.id);

@@ -11,6 +11,9 @@
           <li class="nav-item active">
             <router-link class="nav-link" to="/lists/new">New List</router-link>
           </li>
+          <li class="nav-item active">
+            <router-link class="nav-link" to="/lists">My Lists</router-link>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Account
