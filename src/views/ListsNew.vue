@@ -8,13 +8,14 @@
       <form v-on:submit.prevent="submit()">
         <div class="form-group">
           <label>Destination: </label>
-          <input class="form-control" type="text" v-model="list.name" placeholder="Destination">
+          <input class="form-control" type="text" v-model="newListName" placeholder="Destination">
         </div>
         <div class="form-group">
           <label>Date of Trip: </label>
-          <input class="form-control" type="text" v-model="list.date" placeholder="DD/MM/YYYY">
+          <input class="form-control" type="text" v-model="newListDate" placeholder="MM/DD/YYYY">
         </div>
-        <input type="submit" value="Create" class="btn btn-info">
+          <input type="submit" value="Create" class="btn btn-info">
+
       </form>
     </div>
   </div>
@@ -22,9 +23,10 @@
 
 
 <style>
-.container{
+
+/*.container{
   margin-bottom: 30px;
-}
+}*/
 </style>
 
 
@@ -34,29 +36,32 @@ var axios = require('axios');
 export default {
   data: function() {
     return {
+
       list: {
               name: "",
               date: "",
-              user_id: ""
+              // user_id: ""
             },
       errors: []  
     };      
+
   },
   created: function() {},
   methods: {
-    sumbit: function() {
+    submit: function() {
       var params = {
-                    name: this.list.name,
-                    date: this.list.date,
-                    user_id: this.list.user_id
+                    name: this.newListName,
+                    date: this.newListDate
+                    // user_id: this.user_id
                     };
+                    
       axios.post("/api/lists", params)
         .then(response => {
           this.$router.push("/lists/" + response.data.id);
         }).catch(error => {
           this.errors = error.response.data.errors;
         });              
-    } 
-  }    
-}
+      }
+    }
+  }       
 </script>
