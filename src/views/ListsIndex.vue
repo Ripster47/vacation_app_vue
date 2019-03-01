@@ -17,10 +17,7 @@ var axios = require('axios');
 export default {
   data: function() {
     return {
-            lists: [],
-            name: "",
-            user_id: "",
-            date: ""
+            lists: []
             };
   },
   created: function() {
