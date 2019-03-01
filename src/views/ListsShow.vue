@@ -5,8 +5,8 @@
       <li v-for="item in list.items">{{ item.name }}</li>
     </div>
 
-    <router-link class="btn btn-primary" :to="'/lists/' + list.id + '/edit'">Edit</router-link>
-    <button class="btn btn-danger" v-on:click="destroyList()">Delete List</button>
+    <router-link class="btn btn-info" :to="'/lists/' + list.id + '/edit'">Edit</router-link>
+    <button class="btn btn-info" v-on:click="destroyList()">Delete List</button>
   </div>
 </template>
 
