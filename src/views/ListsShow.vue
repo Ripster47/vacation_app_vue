@@ -2,6 +2,7 @@
   <div class="lists-show">
     <h1>{{ list.name }}</h1>
     <div>
+
       <li v-for="item in list.items" v-bind:class="{complete: item.completed}" v-on:click="toggleItemComplete(item)">{{ item.name }}</li>
     </div>
 
@@ -41,6 +42,7 @@
   .complete {
     text-decoration: line-through;
   }
+
 </style>
 
 <script>
@@ -58,9 +60,11 @@ export default {
                         list_id: "",
                         name: ""
                       }] 
+
             },
       newItemName: "",
       errors: []
+
     };
   },
   created: function() {
@@ -77,6 +81,7 @@ export default {
           console.log("Success", response.data);
           this.$router.push("/");
         });
+
     },
     submit: function() {
       var params = {
@@ -94,6 +99,7 @@ export default {
     toggleItemComplete: function(itemInput) {
       itemInput.completed = !itemInput.completed;
       // axios call to update completed on backend here
+
     }
   }
 }
