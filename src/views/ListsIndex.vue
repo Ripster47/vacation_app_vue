@@ -19,7 +19,8 @@ export default {
     return {
             lists: [],
             name: "",
-            user_id: ""
+            user_id: "",
+            date: ""
             };
   },
   created: function() {
