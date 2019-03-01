@@ -1,4 +1,4 @@
-ListsEdit.vue<template>
+<template>
   <div class="lists-edit">
     <ul>
       <li v-for="error in errors"> {{ error }} </li>
