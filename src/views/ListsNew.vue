@@ -37,14 +37,14 @@ export default {
       list: {
               name: "",
               date: "",
-              user_id: ""
+              // user_id: ""
             },
       errors: []  
     };      
   },
   created: function() {},
   methods: {
-    sumbit: function() {
+    submit: function() {
       var params = {
                     name: this.list.name,
                     date: this.list.date,
