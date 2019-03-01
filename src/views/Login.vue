@@ -60,7 +60,7 @@ export default {
             "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
           if(response.data.user_id) {
-            this.$router.push("/lists/" + response.data.user_id);
+            this.$router.push("/lists/");
           } else {
             this.$router.push("/lists/new");
           };
