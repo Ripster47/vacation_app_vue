@@ -1,4 +1,4 @@
-ListsEdit.vue<template>
+<template>
   <div class="lists-edit">
     <ul>
       <li v-for="error in errors"> {{ error }} </li>
@@ -53,12 +53,12 @@ export default {
       })
   },
   methods: {
-    sumbit: function() {
+    submit: function() {
       var params = {
                     name: this.list.name,
                     date: this.list.date
                     };
-      axios.patch("/api/lists", this.list.id, params)
+      axios.patch("/api/lists/" + this.list.id, params)
         .then(response => {
           this.$router.push("/lists/" + this.list.id);
         }).catch(error => {
