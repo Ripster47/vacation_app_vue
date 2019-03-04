@@ -1,47 +1,49 @@
 <template>
   <div class="sign-up">
-    <div class="container">
-      <form v-on:submit.prevent="submit()">
-        <h3>Vacation</h3>
-        <p>All I've Ever Wanted!</p>
-        <ul>
-          <li class="text-danger" v-for="error in errors">{{ error }}</li>
-        </ul>
-        <div class="form-group">
-          <label>Name:</label> 
-          <input type="text" class="form-control" v-model="name">
+    <form v-on:submit.prevent="submit()">
+      <h3>Vacation</h3>
+      <p>All I've Ever Wanted!</p>
+      <ul>
+        <li class="text-danger" v-for="error in errors">{{ error }}</li>
+      </ul>
+      <div class="form-group">
+        <label>Name:</label> 
+        <input type="text" class="form-control" v-model="name">
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" class="form-control" v-model="email">
+      </div>
+      <div class="form-group">
+        <label>Gender:</label>
+        <input type="gender" class="form-control" v-model="gender">
+      </div>
+       <div class="form-group">
+        <label>Password:</label>
+        <input type="password" class="form-control" v-model="password">
+      </div>
+      <div class="form-group">
+        <label>Password confirmation:</label>
+        <input type="password" class="form-control" v-model="passwordConfirmation">
+      </div>
+      <div class="button_join"> 
+        <input type="submit" class="btn btn-info" value="Join">
+       <div class="already">
+          <label >Already have an account?</label>
+        <div>
+          <router-link v-bind:to="'/login'">Login here!</router-link>
         </div>
-        <div class="form-group">
-          <label>Email:</label>
-          <input type="email" class="form-control" v-model="email">
-        </div>
-        <div class="form-group">
-          <label>Gender:</label>
-          <input type="gender" class="form-control" v-model="gender">
-        </div>
-         <div class="form-group">
-          <label>Password:</label>
-          <input type="password" class="form-control" v-model="password">
-        </div>
-        <div class="form-group">
-          <label>Password confirmation:</label>
-          <input type="password" class="form-control" v-model="passwordConfirmation">
-        </div>
-        <div class="button_join"> 
-          <input type="submit" class="btn btn-primary" value="Join">
-         <div class="already">
-            <label >Already a member?</label>
-          <div>
-            <router-link v-bind:to="'/login'">Login here!</router-link>
-          </div>
-         </div>
-        </div>
-      </form>
-    </div>
+       </div>
+      </div>
+    </form>
   </div>
 </template>
 
 <style>
+.sign-up{
+  padding: 15px;
+  margin-top: 30px;
+}
 
 </style>
 

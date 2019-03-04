@@ -22,17 +22,14 @@
               <router-link class="dropdown-item" to="/">Signup</router-link>
               <router-link class="dropdown-item" to="/login">Login</router-link>
               <router-link class="dropdown-item" to="/logout">Logout</router-link>
-    
             </div>
           </li>
         </ul>
-
       </div>
     </nav>
     <div class="container">
     <router-view/>
     </div>
-  
   </div>
 </template>
 
