@@ -6,6 +6,9 @@
       <router-link style="color:black" v-bind:to="'/lists/' + list.id">
         <h3>{{ list.name }}</h3>
       </router-link>
+
+      <div> Countdown: {{moment((list.date), "MMDDYYYY").fromNow()}} </div>
+
       </ul>
     </div>
   </div>
@@ -26,11 +29,13 @@
 
 <script>
 var axios = require('axios');
+var moment = require('moment');
 
 export default {
   data: function() {
     return {
-            lists: []
+            lists: [],
+            displayDate: "Click Me"
             };
   },
   created: function() {
@@ -40,6 +45,10 @@ export default {
     });
     // ask Josh if we can put the logic for showing only a users lists via user_id here
   },
-  methods: {}
+  methods: {
+      moment: function (date) {
+        return moment(date);
+   }
+  }
 };
 </script>
