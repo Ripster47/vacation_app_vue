@@ -3,22 +3,20 @@
     <ul>
       <li v-for="error in errors"> {{ error }} </li>
     </ul>
-    <div class='container'>
-      <h2>Edit a checklist!</h2>
-      <form v-on:submit.prevent="submit()">
-        <div class="form-group">
-          <label>Destination: </label>
-          <input class="form-control" type="text" v-model="list.name" placeholder="Destination">
-        </div>
-        <div class="form-group">
-          <label>Date of Trip: </label>
-          <input class="form-control" type="text" v-model="list.date" placeholder="Date of Trip">
-        </div>
-        <div class="new-button">
-          <input type="submit" value="Update" class="btn btn-info">
-        </div>
-      </form>
-    </div>
+    <h2>Update Your Trip Information!</h2>
+    <form v-on:submit.prevent="submit()">
+      <div class="form-group">
+        <label>Destination: </label>
+        <input class="form-control" type="text" v-model="list.name" placeholder="Destination">
+      </div>
+      <div class="form-group">
+        <label>Date of Trip: </label>
+        <input class="form-control" type="text" v-model="list.date" placeholder="Date of Trip">
+      </div>
+      <div class="new-button">
+        <input type="submit" value="Update" class="btn btn-info">
+      </div>
+    </form>
   </div>
 </template>
 
@@ -27,8 +25,12 @@
 .new-button{
   text-align: center
 }
-.container{
-  margin-bottom: 30px;
+.lists-edit{
+  padding: 10px;
+  margin-top: 30px;
+}
+.lists-edit h2{
+  margin-bottom: 25px;
 }
 </style>
 

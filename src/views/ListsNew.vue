@@ -3,30 +3,30 @@
     <ul>
       <li v-for="error in errors"> {{ error }} </li>
     </ul>
-    <div class='container'>
-      <h2>Create a checklist!</h2>
-      <form v-on:submit.prevent="submit()">
-        <div class="form-group">
-          <label>Destination: </label>
-          <input class="form-control" type="text" v-model="newListName" placeholder="Destination">
-        </div>
-        <div class="form-group">
-          <label>Date of Trip: </label>
-          <input class="form-control" type="text" v-model="newListDate" placeholder="MM/DD/YYYY">
-        </div>
-          <input type="submit" value="Create" class="btn btn-info">
+    <h2>Create a checklist</h2>
 
-      </form>
-    </div>
+    <form v-on:submit.prevent="submit()">
+      <div class="form-group">
+        <label>Destination: </label>
+        <input class="form-control" type="text" v-model="newListName" placeholder="Destination">
+      </div>
+      <div class="form-group">
+        <label>Date of Trip: </label>
+        <input class="form-control" type="text" v-model="newListDate" placeholder="MM/DD/YYYY">
+      </div>
+        <input type="submit" value="Create" class="btn btn-info">
+    </form>
+
   </div>
 </template>
 
 
 <style>
+.lists-new{
+  padding: 20px;
+  margin-top: 30px;
+}
 
-/*.container{
-  margin-bottom: 30px;
-}*/
 </style>
 
 

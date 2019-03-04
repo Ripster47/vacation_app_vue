@@ -1,14 +1,27 @@
 <template>
   <div class="lists-index">
+    <h2>My Trips ✈️</h2>
     <div v-for ="list in lists">
-      <router-link v-bind:to="'/lists/' + list.id">
-        <h1>{{ list.name }}</h1>
+      <ul>
+      <router-link style="color:black" v-bind:to="'/lists/' + list.id">
+        <h3>{{ list.name }}</h3>
       </router-link>
+      </ul>
     </div>
   </div>
 </template>
 
 <style>
+.lists-index{
+  padding: 20px;
+  margin-top: 30px;
+}
+.lists-index h2{
+  text-decoration: underline;
+}
+.lists-index h3{
+  text-align: left;
+}
 </style>
 
 <script>
